@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Verifigo">
+
+        <!-- 1. HomeActivity: The main launcher screen -->
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Buyer Activities (All Authentication and Browsing Pages) -->
+        <activity android:name=".ui.buyer.BuyerLoginActivity" />
+        <activity android:name=".ui.buyer.BuyerRegistrationActivity" />
+        <activity android:name=".ui.buyer.VehicleListActivity" />
+        <activity android:name=".ui.buyer.VehicleDetailActivity" />
+
+        <!-- 3. Seller Activities (All Seller Management Pages) -->
+        <activity android:name=".ui.seller.SellerLoginActivity" />
+        <activity android:name=".ui.seller.SellerRegistrationActivity" />
+        <activity android:name=".ui.seller.SellerDashboardActivity" />
+
+        <!-- 4. Authentication Activity (Crucial core feature) -->
+        <!-- Since we created the file 'AuthenticateVehicleActivity.kt' and its layout,
+             it must be included here to prevent runtime crashes when the buyer clicks the button. -->
+        <activity android:name=".ui.authentication.AuthenticateVehicleActivity" />
+
+    </application>
+
+</manifest>

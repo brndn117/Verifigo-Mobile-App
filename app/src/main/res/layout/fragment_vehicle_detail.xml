@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.buyer.VehicleDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Vehicle Image -->
+        <ImageView
+            android:id="@+id/ivVehicleImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="Vehicle Image" />
+
+        <!-- Vehicle Title -->
+        <TextView
+            android:id="@+id/tvVehicleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:text="Mercedes-Benz C200 (2017)" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_marginBottom="8dp"
+            tools:text="Price: KSH 5,800,000" />
+
+        <!-- Mileage -->
+        <TextView
+            android:id="@+id/tvMileage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            tools:text="Mileage: 62000 km" />
+
+        <!-- Authentication/Purchase Button (Placeholder) -->
+        <Button
+            android:id="@+id/btnAuthenticate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Authenticate Vehicle"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>
